@@ -20,5 +20,6 @@ public class HelpSelf {
         System.gc();
         Thread.sleep(1000L);
         System.out.println(hs);
+        //asd
     }
 }
