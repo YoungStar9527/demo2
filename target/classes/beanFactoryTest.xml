@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:myname="http://www.lexueba.com/schema/user123"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.lexueba.com/schema/user123 http://www.lexueba.com/schema/user123.xsd" >
+    <!--<bean id="myTestBean" class="com.star.jvm.demo.spring.MyTestBean"/>-->
+
+ <!--   <bean id="getBeanTest" class="com.star.jvm.demo.spring.bean.GetBeanTest">
+        <lookup-method name="getBean" bean="teacher"/>
+    </bean>
+
+    <bean id="teacher" class="com.star.jvm.demo.spring.bean.Student" />-->
+
+ <!--   <myname:user123 id="testbean" userName="aaa" email="bbb"/>-->
+
+    <bean id="aa" class="com.star.jvm.demo.spring.bean.dependencies.CircularA">
+        <property name="circularB" ref="bb"/>
+    </bean>
+
+    <bean id="bb" class="com.star.jvm.demo.spring.bean.dependencies.CircularB">
+        <property name="circularC" ref="cc"/>
+    </bean>
+
+    <bean id="cc" class="com.star.jvm.demo.spring.bean.dependencies.CircularC">
+        <property name="circularA" ref="aa"/>
+    </bean>
+
+</beans>
