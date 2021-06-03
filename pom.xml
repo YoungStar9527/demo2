@@ -39,6 +39,13 @@
             <artifactId>redisson</artifactId>
             <version>3.15.5</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
     </dependencies>
     <properties>
         <maven.compiler.source>13</maven.compiler.source>
