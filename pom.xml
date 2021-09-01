@@ -39,7 +39,7 @@
             <artifactId>redisson</artifactId>
             <version>3.15.5</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+        <!-- https://mvnrepository.com/artifact/redis.clients/jedis  -->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
