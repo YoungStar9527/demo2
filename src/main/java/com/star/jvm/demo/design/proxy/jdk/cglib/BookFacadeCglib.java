@@ -5,6 +5,7 @@ import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * 使用cglib动态代理
@@ -27,6 +28,7 @@ public class BookFacadeCglib implements MethodInterceptor {
         enhancer.setSuperclass(this.target.getClass());
         // 回调方法
         enhancer.setCallback(this);
+        CopyOnWriteArrayList<Object> objects = new CopyOnWriteArrayList<>();objects.add(0);
         // 创建代理对象
         return enhancer.create();
     }
