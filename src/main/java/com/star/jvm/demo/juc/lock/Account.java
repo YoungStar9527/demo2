@@ -6,7 +6,8 @@ public class Account {
     private int balance;
     void transfer(Account target, int amt){
         //这个while是自循环，跳出while循环才会执行后续的try代码
-        while(!actr.apply(this, target));
+        //while(!actr.apply(this, target));
+        actr.apply(this, target);
             try{
                 synchronized(this){
                     System.out.println(this.toString()+" lock obj1");
